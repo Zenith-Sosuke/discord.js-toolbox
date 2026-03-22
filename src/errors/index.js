@@ -86,11 +86,19 @@ class RateLimitError extends BotError {
     this.name = 'RateLimitError';
   }
 }
+
+class NotInGuildError extends BotError {
+  constructor(message = 'This command can only be used in a server.') {
+    super(message, 'NOT_IN_GUILD');
+    this.name = 'NotInGuildError';
+  }
+}
 module.exports = {
   BotError,
   PermissionError,
   UserNotFoundError,
   RateLimitError,
+  NotInGuildError,
   InvalidArgumentError,
   CooldownError,
   CooldownManager,
