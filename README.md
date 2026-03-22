@@ -2,7 +2,7 @@
 
 > A utility library for Discord.js v14 bots — embeds, moderation helpers, pagination, formatters, validators, and more.
 
-Built and maintained by [ZenithFKX](https://github.com/Zenith-Sosuke).
+Built and maintained by [Zenith-Sosuke](https://github.com/Zenith-Sosuke).
 
 ---
 
