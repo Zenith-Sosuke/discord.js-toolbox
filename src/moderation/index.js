@@ -120,11 +120,29 @@ async function safeTimeout(member, durationMs, reason) {
   }
 }
 
+/**
+ * Attempts to unban a user by ID
+ * @param {import('discord.js').Guild} guild
+ * @param {string} userId
+ * @param {string} reason
+ * @returns {Promise<{ success: boolean, error: string|null }>}
+ */
+async function safeUnban(guild, userId, reason) {
+  try {
+    await guild.bans.remove(userId, reason);
+    return { success: true, error: null };
+  } catch (err) {
+    return { success: false, error: err.message };
+  }
+}
+
+
 module.exports = {
   parseDuration,
   formatDuration,
   canModerate,
   dmUser,
+  safeUnban,
   safeBan,
   safeKick,
   safeTimeout,
