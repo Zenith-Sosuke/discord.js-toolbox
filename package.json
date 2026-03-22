@@ -1,5 +1,5 @@
 {
-  "name": "djs-utils",
+  "name": "discord.js-utils",
   "version": "1.0.0",
   "description": "A utility library for Discord.js v14 bots — embeds, moderation helpers, pagination, formatters, and more.",
   "main": "src/index.js",
