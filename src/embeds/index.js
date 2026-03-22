@@ -70,6 +70,14 @@ function loadingEmbed(message = 'Please wait...') {
 }
 
 /**
+ * Returns a random hex color integer for embeds
+ * @returns {number}
+ */
+function randomColor() {
+  return Math.floor(Math.random() * 0xffffff);
+}
+
+/**
  * Creates a custom embed with common defaults pre-applied
  * @param {object} options
  * @param {string} options.title
@@ -98,6 +106,7 @@ module.exports = {
   successEmbed,
   errorEmbed,
   warnEmbed,
+  randomColor,
   infoEmbed,
   loadingEmbed,
   customEmbed,
