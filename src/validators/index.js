@@ -95,12 +95,22 @@ function inNumericRange(num, min, max) {
   return num >= min && num <= max;
 }
 
+/**
+ * Checks if a string is a valid duration format e.g. '10m', '2h'
+ * @param {string} str
+ * @returns {boolean}
+ */
+function isValidDuration(str) {
+  return /^(\d+)([smhdw])$/i.test(str);
+}
+
 module.exports = {
   isValidId,
   isValidUrl,
   isImageUrl,
   isValidHex,
   hexToInt,
+  isValidDuration,
   hasPermissions,
   getMissingPermissions,
   isInRange,
