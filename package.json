@@ -21,7 +21,7 @@
   ],
   "author": "ZenithFKX",
   "license": "MIT",
-  "peerDependencies": {
+  "dependencies": {
     "discord.js": "^14.0.0"
   },
   "engines": {
