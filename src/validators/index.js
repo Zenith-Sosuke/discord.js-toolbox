@@ -113,12 +113,25 @@ function isValidDuration(str) {
 function isValidRole(guild, roleId) {
   return guild.roles.cache.has(roleId);
 }
+
+/**
+ * Clamps a number between a min and max value
+ * @param {number} num
+ * @param {number} min
+ * @param {number} max
+ * @returns {number}
+ */
+function clamp(num, min, max) {
+  return Math.min(Math.max(num, min), max);
+}
+
 module.exports = {
   isValidId,
   isValidUrl,
   isImageUrl,
   isValidHex,
   isValidRole,
+  clamp,
   hexToInt,
   isValidDuration,
   hasPermissions,
