@@ -88,11 +88,21 @@ function toUnix(date) {
 function msToSeconds(ms) {
   return Math.floor(ms / 1000);
 }
+/**
+ * Returns the number of days until a future date
+ * @param {Date} futureDate
+ * @returns {number}
+ */
+function daysUntil(futureDate) {
+  const diff = futureDate.getTime() - Date.now();
+  return Math.ceil(diff / 86400000);
+}
 
 module.exports = {
   timeAgo,
   accountAge,
   memberAge,
+  daysUntil,
   shortDate,
   msToSeconds,
   fullDate,
