@@ -171,3 +171,6 @@ See [CHANGELOG.md](./CHANGELOG.md) for full version history.
 ## License
 
 MIT — free to use in your bots.
+
+---
+*djs-utils is actively maintained. Star the repo if it helps your bot!*
