@@ -129,6 +129,15 @@ function pluralize(word, count) {
 function getTag(user) {
   return user.discriminator === '0' ? user.username : `${user.username}#${user.discriminator}`;
 }
+/**
+ * Strips Discord markdown from a string
+ * @param {string} str
+ * @returns {string}
+ */
+function stripMarkdown(str) {
+  return str.replace(/(\*|_|~|`|>|\\)/g, '');
+}
+
 
 
 module.exports = {
@@ -136,6 +145,8 @@ module.exports = {
   titleCase,
   formatNumber,
   mention,
+  getTag,
+    stripMarkdown,
   channelMention,
   roleMention,
   discordTimestamp,
