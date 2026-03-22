@@ -80,11 +80,21 @@ function toUnix(date) {
   return Math.floor((date instanceof Date ? date.getTime() : date) / 1000);
 }
 
+/**
+ * Converts milliseconds to seconds
+ * @param {number} ms
+ * @returns {number}
+ */
+function msToSeconds(ms) {
+  return Math.floor(ms / 1000);
+}
+
 module.exports = {
   timeAgo,
   accountAge,
   memberAge,
   shortDate,
+  msToSeconds,
   fullDate,
   addDuration,
   toUnix,
