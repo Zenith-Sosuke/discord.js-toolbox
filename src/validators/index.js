@@ -104,11 +104,21 @@ function isValidDuration(str) {
   return /^(\d+)([smhdw])$/i.test(str);
 }
 
+/**
+ * Checks if a role is mentionable and exists in the guild
+ * @param {import('discord.js').Guild} guild
+ * @param {string} roleId
+ * @returns {boolean}
+ */
+function isValidRole(guild, roleId) {
+  return guild.roles.cache.has(roleId);
+}
 module.exports = {
   isValidId,
   isValidUrl,
   isImageUrl,
   isValidHex,
+  isValidRole,
   hexToInt,
   isValidDuration,
   hasPermissions,
