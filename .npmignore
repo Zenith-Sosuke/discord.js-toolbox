@@ -1,0 +1,4 @@
+examples/
+test.js
+*.log
+.eslintrc
