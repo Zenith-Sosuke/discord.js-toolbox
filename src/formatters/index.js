@@ -111,6 +111,17 @@ function padStart(value, length, char = '0') {
   return String(value).padStart(length, char);
 }
 
+/**
+ * Pluralizes a word based on count
+ * @param {string} word
+ * @param {number} count
+ * @returns {string} e.g. '1 apple', '3 apples'
+ */
+function pluralize(word, count) {
+  return count === 1 ? `${count} ${word}` : `${count} ${word}s`;
+}
+
+
 module.exports = {
   truncate,
   titleCase,
@@ -123,4 +134,5 @@ module.exports = {
   inlineCode,
   formatBytes,
   padStart,
+  pluralize
 };
