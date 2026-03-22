@@ -164,6 +164,9 @@ throw new CooldownError(remaining);
 ```
 
 ---
+## Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md) for full version history.
 
 ## License
 
