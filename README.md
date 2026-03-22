@@ -1,4 +1,4 @@
-# djs-utils
+# discord.js-toolbox
 
 > A utility library for Discord.js v14 bots — embeds, moderation helpers, pagination, formatters, validators, and more.
 
