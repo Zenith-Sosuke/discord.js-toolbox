@@ -121,6 +121,15 @@ function pluralize(word, count) {
   return count === 1 ? `${count} ${word}` : `${count} ${word}s`;
 }
 
+/**
+ * Returns a user's full tag (username#discriminator or just username for new system)
+ * @param {import('discord.js').User} user
+ * @returns {string}
+ */
+function getTag(user) {
+  return user.discriminator === '0' ? user.username : `${user.username}#${user.discriminator}`;
+}
+
 
 module.exports = {
   truncate,
