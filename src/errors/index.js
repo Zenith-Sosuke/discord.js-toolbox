@@ -80,10 +80,17 @@ class CooldownManager {
   }
 }
 
+class RateLimitError extends BotError {
+  constructor(message = 'You are being rate limited.') {
+    super(message, 'RATE_LIMITED');
+    this.name = 'RateLimitError';
+  }
+}
 module.exports = {
   BotError,
   PermissionError,
   UserNotFoundError,
+  RateLimitError,
   InvalidArgumentError,
   CooldownError,
   CooldownManager,
